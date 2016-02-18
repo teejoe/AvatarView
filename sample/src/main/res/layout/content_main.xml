@@ -1,33 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.m2x.avatarview.sample.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:orientation="vertical">
 
-    <com.m2x.avatarview.AvatarView
-        android:id="@+id/icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerVertical="true"
-        android:padding="5dp"
-        app:avtv_fill_color="#009900"
-        app:avtv_random_fill_color="true"
-        app:avtv_text="text"
-        app:avtv_text_size="30sp"
-        app:avtv_fit_text_length="4" />
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:avtv_fill_color="#009900"
+            app:avtv_fit_text_length="5"
+            app:avtv_random_fill_color="true"
+            app:avtv_text="text1"
+            app:avtv_text_size="40sp"/>
 
-</RelativeLayout>
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:avtv_fill_color="#009900"
+            app:avtv_fit_text_length="1"
+            app:avtv_random_fill_color="false"
+            app:avtv_text="text2"
+            app:avtv_text_size="40sp"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:avtv_fit_text_length="2"
+            app:avtv_random_fill_color="true"
+            app:avtv_text="text3"
+            app:avtv_text_size="40sp"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:avtv_fit_text_length="3"
+            app:avtv_random_fill_color="true"
+            app:avtv_text="text4"
+            app:avtv_text_size="40sp"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:avtv_fit_text_length="4"
+            app:avtv_random_fill_color="true"
+            app:avtv_text="text5"
+            app:avtv_text_size="40sp"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/avatar"
+            app:avtv_random_fill_color="false"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/avatar"
+            app:avtv_random_fill_color="false"
+            app:avtv_border_width="2dp"
+            app:avtv_border_color="#990000"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/avatar"
+            app:avtv_random_fill_color="false"
+            app:avtv_border_width="2dp"
+            app:avtv_border_color="#000000"
+            app:avtv_text="text"
+            app:avtv_text_color="#000066"
+            app:avtv_fit_text_length="4"
+            app:avtv_text_size="20sp"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:avtv_fit_text_length="5"
+            app:avtv_random_fill_color="true"
+            app:avtv_text="text6"
+            app:avtv_text_size="40sp"
+            app:avtv_border_width="2dp"
+            app:avtv_border_color="#000099"/>
+
+        <com.m2x.avatarview.AvatarView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:avtv_fit_text_length="5"
+            app:avtv_random_fill_color="true"
+            app:avtv_text="text7"
+            app:avtv_text_size="30sp"
+            app:avtv_border_width="4dp"
+            app:avtv_border_overlay="false"
+            app:avtv_border_color="#ff0000"/>
+    </LinearLayout>
+</ScrollView>
