@@ -26,7 +26,10 @@ dependencies {
 }
 
 publish {
-    userOrg = 'm2x'
+    bintrayUser = BINTRAY_USER
+    bintrayKey = BINTRAY_KEY
+    dryRun = false
+    userOrg = 'teejoe'
     groupId = 'com.m2x'
     artifactId = 'AvatarView'
     version = '1.0.0'
