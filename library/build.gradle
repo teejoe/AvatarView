@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+}
+
+publish {
+    userOrg = 'm2x'
+    groupId = 'com.m2x'
+    artifactId = 'AvatarView'
+    version = '1.0.0'
+    description = 'Circular ImageView or TextView with colorful background for showing avatar.'
+    website = 'https://github.com/teejoe/AvatarView'
+    issueTracker = "https://github.com/teejoe/AvatarView/issues"
+    repository = "https://github.com/teejoe/AvatarView.git"
+}

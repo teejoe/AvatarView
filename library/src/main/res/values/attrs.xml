@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AvatarView">
+        <attr name="avtv_border_width" format="dimension" />
+        <attr name="avtv_border_color" format="color" />
+        <attr name="avtv_border_overlay" format="boolean" />
+        <attr name="avtv_fill_color" format="color" />
+        <attr name="avtv_random_fill_color" format="boolean" />
+        <attr name="avtv_text" format="string" />
+        <attr name="avtv_text_color" format="color" />
+        <attr name="avtv_text_size" format="dimension" />
+        <attr name="avtv_fit_text_length" format="integer" />
+    </declare-styleable>
+</resources>
