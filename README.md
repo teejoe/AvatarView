@@ -1,5 +1,5 @@
-AvatarView
-==============
+Android AvatarView
+===================
 A circular ImageView or TextView with colorful background for showing avatar.
 
 This is based on [CircleImageView from hdodenhof](https://github.com/hdodenhof/CircleImageView) and [FitTextView from SUKOHI](https://github.com/SUKOHI/FitTextView)
