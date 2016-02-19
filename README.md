@@ -71,7 +71,7 @@ Usage
 License
 ============
 
-    Copyright 2014-2015 M2X
+    Copyright 2014-2016 M2X
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
