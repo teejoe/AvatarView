@@ -12,26 +12,22 @@ Features
 * Display circular image / text.
 * Text auto fitting in circle.
 * Display colorful background for different text.
+* Customize background color generator.
+
+Gradle integration
+==================
+
+Minimum code for Gradle integration, place code in your `build.gradle`
+
+```
+dependencies {
+    compile 'com.m2x:AvatarView:1.0.1'
+}
+```
 
 Usage
-==============
+============
 
-* Add attrs to res/values/attrs.xml
-
-    ```
-    <declare-styleable name="AvatarView">
-        <attr name="avtv_border_width" format="dimension" />
-        <attr name="avtv_border_color" format="color" />
-        <attr name="avtv_border_overlay" format="boolean" />
-        <attr name="avtv_fill_color" format="color" />
-        <attr name="avtv_random_fill_color" format="boolean" />
-        <attr name="avtv_text" format="string" />
-        <attr name="avtv_text_color" format="color" />
-        <attr name="avtv_text_size" format="dimension" />
-        <attr name="avtv_fit_text_length" format="integer" />
-    </declare-styleable>
-    ```
-* Copy com.m2x.avatarview.AvatarView.java(in library project) to your project.
 * Add code in your layout.xml:
 
     ```
@@ -40,11 +36,36 @@ Usage
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:padding="5dp"
-        app:avtv_fill_color="#009900"
         app:avtv_fit_text_length="5"
         app:avtv_random_fill_color="true"
         app:avtv_text="text1"
         app:avtv_text_size="40sp"/>
+    ```
+
+* Customize backgounrd color generator
+
+    You can override computeFillColor() to make you own background color generator. Currently its based on the text content:
+    
+    ```
+    protected int computeFillColor() {
+        if (mText == null) {
+            return mFillColor;
+        }
+
+        int length = ((mText.length() > 10) ? 10 : mText.length());
+
+        int value = 0;
+        for (int i = 0; i < length; i++) {
+            value += mText.charAt(i);
+        }
+        value *= 12345;
+
+        int red = 100 + ((value & 0x00ff0000) >> 17);
+        int green = 100 + ((value & 0x0000ff00) >> 9);
+        int blue = 100 + ((value & 0x000000ff) >> 1);
+
+        return Color.argb(255, red, green, blue);
+    }
     ```
 
 License
