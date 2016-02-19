@@ -16,9 +16,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -171,7 +168,7 @@ public class AvatarView extends ImageView {
         return mBorderColor;
     }
 
-    public void setBorderColor(@ColorInt int borderColor) {
+    public void setBorderColor(int borderColor) {
         if (borderColor == mBorderColor) {
             return;
         }
@@ -181,7 +178,7 @@ public class AvatarView extends ImageView {
         invalidate();
     }
 
-    public void setBorderColorResource(@ColorRes int borderColorRes) {
+    public void setBorderColorResource(int borderColorRes) {
         setBorderColor(getContext().getResources().getColor(borderColorRes));
     }
 
@@ -189,7 +186,7 @@ public class AvatarView extends ImageView {
         return mFillColor;
     }
 
-    public void setFillColor(@ColorInt int fillColor) {
+    public void setFillColor(int fillColor) {
         if (fillColor == mFillColor) {
             return;
         }
@@ -230,7 +227,7 @@ public class AvatarView extends ImageView {
         return mFitTextLength;
     }
 
-    public void setTextColor(@ColorInt int textColor) {
+    public void setTextColor(int textColor) {
         mTextColor = textColor;
         mTextPaint.setColor(textColor);
         invalidate();
@@ -240,7 +237,7 @@ public class AvatarView extends ImageView {
         return mTextColor;
     }
 
-    public void setFillColorResource(@ColorRes int fillColorRes) {
+    public void setFillColorResource(int fillColorRes) {
         setFillColor(getContext().getResources().getColor(fillColorRes));
     }
 
@@ -285,7 +282,7 @@ public class AvatarView extends ImageView {
     }
 
     @Override
-    public void setImageResource(@DrawableRes int resId) {
+    public void setImageResource(int resId) {
         super.setImageResource(resId);
         mBitmap = getBitmapFromDrawable(getDrawable());
         setup();

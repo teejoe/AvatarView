@@ -21,8 +21,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
 }
 
 publish {
@@ -32,7 +30,7 @@ publish {
     userOrg = 'teejoe'
     groupId = 'com.m2x'
     artifactId = 'AvatarView'
-    version = '1.0.0'
+    version = '1.0.1'
     description = 'Circular ImageView or TextView with colorful background for showing avatar.'
     website = 'https://github.com/teejoe/AvatarView'
     issueTracker = "https://github.com/teejoe/AvatarView/issues"
